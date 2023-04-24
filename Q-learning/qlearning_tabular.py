@@ -40,7 +40,7 @@ class Agent():
     def update(self, state, action, reward, next_state):
         
         prediction = self.qtable[state, action]
-        target = reward + self.gamma * np.max(self.qtable[next_state, :]) 
+        target = reward + self.gamma * np.max(self.qtable[next_state, :])*(1-done) # The (1-done) condition makes learning much less stable
         update = target - prediction
         self.qtable[state, action] = self.qtable[state, action] + self.lr * update
         
