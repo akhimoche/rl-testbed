@@ -58,9 +58,7 @@ class Agent():
         cond = random.random() # generate random float between 0 and 1
         
         e = min(self.decay_steps-1, e)
-        eps = self.eps_vals[e] 
-        
-        print(eps)
+        eps = self.eps_vals[e]
         
         if cond < eps:
             # Choose random action
