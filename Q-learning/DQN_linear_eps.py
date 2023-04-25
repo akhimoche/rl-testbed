@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
+# DQN without target network or experience replay, using linear epsilon decay during training.
 
 
 import tensorflow as tf
