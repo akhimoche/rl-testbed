@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
+# Offline DQN algorithm without target network or experience replay. 
+# Experiences are stored online, shuffled, and then used in a random order to update Q network weights.
 
 
 import tensorflow as tf
