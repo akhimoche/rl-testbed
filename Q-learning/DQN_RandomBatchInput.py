@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # Offline DQN algorithm without target network or experience replay. 
-# Experiences are stored online, shuffled, and then used in a random order to update Q network weights.
+# Experiences are stored onliny with only the last `batch_size' stored and then used for training.
 
 
 import tensorflow as tf
