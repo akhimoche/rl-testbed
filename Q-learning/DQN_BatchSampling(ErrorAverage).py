@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# Batch Sampling DQN that sums the error of each sample in batch and uses that mean error to compute gradient and update weights
 
 
 import tensorflow as tf
