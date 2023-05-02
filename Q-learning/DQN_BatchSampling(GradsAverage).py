@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
+# Batch Sampling DQN that sums the gradient calculated for each sample in the minibatch and uses this mean gradient to update weights
 
 
 import tensorflow as tf
