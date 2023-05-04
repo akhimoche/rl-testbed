@@ -93,9 +93,12 @@ class Agent():
                 Q_s_a = Q_s[0][a]
 
                 # Get target
-                Q_sp = self.qModel(next_state, training=True)
-                max_Q = tf.reduce_max(Q_sp, axis=1)
-                target = reward + self.gamma*max_Q
+                if done:
+                    target = reward # terminal state has value = 0
+                else:
+                    Q_sp = self.qModel(next_state, training=True)
+                    max_Q = tf.reduce_max(Q_sp, axis=1)
+                    target = reward + self.gamma*max_Q
 
                 # Compute error
                 error = (target - Q_s_a)**2
