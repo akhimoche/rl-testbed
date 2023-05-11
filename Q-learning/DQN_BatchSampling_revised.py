@@ -12,7 +12,7 @@ from collections import deque
 import cProfile
 
 
-# In[2]:
+# Sample efficient version of grad accumulation taking advantage of tensorflow parallelisation in the forward pass. 
 
 
 print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
