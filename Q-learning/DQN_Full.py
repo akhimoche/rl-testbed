@@ -52,8 +52,8 @@ class Agent():
     
     def __init__(self):
         self.gamma = 0.99
-        self.eps_max = 0
-        self.eps_min = 0
+        self.eps_max = 1
+        self.eps_min = 0.01
         self.decay_rate = 0.005 # number of episodes over which epsilon is decayed
         self.buffer_size = 10000
         self.batch_size = 32
