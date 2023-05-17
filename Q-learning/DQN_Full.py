@@ -54,10 +54,10 @@ class Agent():
         self.gamma = 0.99
         self.eps_max = 1
         self.eps_min = 0.01
-        self.decay_rate = 0.005 # number of episodes over which epsilon is decayed
+        self.decay_rate = 0.01 # number of episodes over which epsilon is decayed
         self.buffer_size = 10000
-        self.batch_size = 32
-        self.update_steps = 500
+        self.batch_size = 64
+        self.update_steps = 10
         self.timestep = 0
         
         self.buffer = deque(maxlen=self.buffer_size)
