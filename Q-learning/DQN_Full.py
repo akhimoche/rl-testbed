@@ -217,7 +217,8 @@ array = cum_rew_train
 aver = moving_average(array, 50)
 
 fig = plt.gcf()
-plt.title("DQN Cumulative Reward graph against moving average, update_steps=" + str(agent.update_steps))
+plt.title(f'DQN: α={agent.lr}, γ={agent.gamma}, ε_dec={agent.decay_rate}, batch={agent.batch_size}, C={agent.update_steps}')
+fig.set_size_inches(10.5, 10.5)
 plt.plot(array, label='training')
 plt.plot(aver, label='moving average')
 plt.xlabel("Episode Number")
